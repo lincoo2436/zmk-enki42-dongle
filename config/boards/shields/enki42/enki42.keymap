@@ -17,12 +17,7 @@
 
         cb_Esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <18 19>;
-        };
-
-        cb_closew {
-            bindings = <&kp RA(F4)>;
-            key-positions = <1 2>;
+            key-positions = <19 20>;
         };
 
         cb_quicker {
@@ -33,6 +28,7 @@
         cb_ditto {
             bindings = <&kp LA(GRAVE)>;
             key-positions = <3 4>;
+            layers = <0>;
         };
     };
 
@@ -47,10 +43,10 @@
             //                    | ALT | WIN | LWR |       | RSE | SPC  | RTN |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R     &kp T          &kp Y      &kp U   &kp I         &kp O    &kp P     &kp BSPC
-&kp CAPS        &kp A  &kp S  &kp D      &lt 4 F   &lt 5 G        &kp H      &kp J   &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V     &kp B          &kp N      &kp M   &kp COMMA     &kp DOT  &kp FSLH  &mt RSHFT BACKSLASH
-                              &kp LCTRL  &kp LGUI  &lt 1 ENTER    &kp SPACE  &tog 2  &lt 3 ESCAPE
+&kp TAB         &kp Q            &kp W  &kp E      &kp R     &kp T    &kp Y      &kp U      &kp I   &kp O      &kp P       &kp BSPC
+&kp CAPS        &kp A            &kp S  &kp D      &kp F     &kp G    &kp H      &kp J      &kp K   &kp L      &kp SEMI    &kp SQT
+&kp LEFT_SHIFT  &lt 3 BACKSLASH  &kp Z  &kp X      &kp C     &kp V    &kp B      &kp N      &kp M   &kp COMMA  &kp PERIOD  &mt LEFT_ALT SLASH
+                                        &kp LCTRL  &kp LGUI  &mo 1    &kp ENTER  &kp SPACE  &tog 2
             >;
         };
 
@@ -62,10 +58,10 @@
             //                        |     |     |           | ADJ | SPC |  RET  |
 
             bindings = <
-&trans  &kp EXCL   &kp AT       &kp HASH         &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS        &kp UP_ARROW        &kp LPAR   &kp RPAR           &kp DEL
-&trans  &kp MINUS  &kp KP_PLUS  &kp LBRC         &kp HOME  &kp END      &kp END    &kp LEFT_ARROW  &kp DOWN            &kp RIGHT  &kp GRAVE          &kp RETURN
-&trans  &kp ESC    &kp LGUI     &kp RIGHT_BRACE  &kp CLCK  &kp DQT      &kp MINUS  &kp EQUAL       &kp LS(UNDERSCORE)  &kp PLUS   &kp DOUBLE_QUOTES  &mt RSHFT TILDE
-                                &trans           &trans    &trans       &kp SPACE  &mo 3           &kp RET
+&trans  &kp N1     &kp NUMBER_2  &kp N3           &kp N4         &kp N5     &kp NUMBER_6    &kp N7        &kp N8              &kp N9     &kp N0             &kp DEL
+&trans  &kp MINUS  &kp INSERT    &kp LBRC         &kp HOME       &kp END    &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN            &kp RIGHT  &kp GRAVE          &kp RETURN
+&trans  &kp EQUAL  &kp LGUI      &kp RIGHT_BRACE  &kp BACKSPACE  &kp DEL    &kp MINUS       &kp EQUAL     &kp LS(UNDERSCORE)  &kp PLUS   &kp DOUBLE_QUOTES  &kp SQT
+                                 &kp TILDE        &kp COLON      &trans     &kp SPACE       &mo 2         &kp ESC
             >;
         };
 
@@ -77,10 +73,10 @@
             //                       |     | ADJ | BKSP |    |     |
 
             bindings = <
-&kp ESC       &kp N1     &kp N2     &kp N3            &kp N4         &kp N5      &kp N6     &kp N7        &kp N8      &kp N9     &kp N0     &kp DEL
-&kp LEFT_WIN  &kp MINUS  &kp EQUAL  &kp LBKT          &kp RBKT       &kp BSLH    &kp LEFT   &kp UP_ARROW  &kp DOWN    &kp RIGHT  &kp COLON  &kp DOUBLE_QUOTES
-&kp F1        &kp F2     &kp F3     &kp F4            &kp F5         &kp F6      &kp F7     &kp F8        &kp F9      &kp F10    &kp F11    &kp F12
-                                    &mt CAPSLOCK TAB  &kp BACKSPACE  &mo 3       &kp SPACE  &tog 2        &kp RETURN
+&kp ESC       &kp N1     &kp N2     &kp N3     &kp N4         &kp N5          &kp N6    &kp N7        &kp N8      &kp N9     &kp N0        &kp BACKSPACE
+&kp LEFT_WIN  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT       &kp BSLH        &kp LEFT  &kp UP_ARROW  &kp DOWN    &kp RIGHT  &kp CAPSLOCK  &kp TAB
+&kp F1        &kp F2     &kp F3     &kp F4     &kp F5         &kp F6          &kp F7    &kp F8        &kp F9      &kp F10    &kp F11       &kp F12
+                                    &kp LSHFT  &kp BACKSPACE  &kp LEFT_ALT    &tog 2    &kp SPACE     &kp RETURN
             >;
         };
 
@@ -92,10 +88,10 @@
             //                                              |     |     |     |     |     |
 
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none             &rgb_ug RGB_TOG      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &ext_power EP_ON  &ext_power EP_OFF    &none         &none         &none         &none         &none         &none
-&none            &none            &none            &none            &none             &kp K_SLEEP          &sys_reset    &out OUT_USB  &out OUT_BLE  &none         &none         &none
-                                                   &trans           &trans            &trans               &tog 3        &trans        &trans
+&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none             &rgb_ug RGB_TOG      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &bt BT_CLR
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &ext_power EP_ON  &ext_power EP_OFF    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 4  &none         &none
+&none            &none            &none            &none            &none             &kp K_SLEEP          &sys_reset     &out OUT_USB   &out OUT_BLE   &none          &none         &none
+                                                   &trans           &trans            &trans               &tog 4         &tog 5         &tog 6
             >;
         };
 
@@ -103,7 +99,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp NUMBER_8  &kp N9  &kp N0     &kp BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp N6  &kp PLUS   &kp STAR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1  &kp N2        &kp N3  &kp MINUS  &kp SLASH
+&trans  &trans  &trans  &trans  &trans  &trans    &tog 4  &kp NUMBER_1  &kp N2        &kp N3  &kp MINUS  &kp SLASH
                         &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
@@ -112,8 +108,17 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOLLAR     &kp PERCENT   &kp CARET             &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp EXCL       &kp AT_SIGN   &kp HASH              &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &tog 5  &kp EXCL       &kp AT_SIGN   &kp HASH              &trans                 &trans
                         &trans  &trans  &trans    &trans  &trans         &trans
+            >;
+        };
+
+        lock {
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none  &none   &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none   &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none   &none  &none  &none
+                     &none  &none  &none    &none  &none  &tog 6
             >;
         };
     };
